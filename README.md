@@ -19,7 +19,7 @@ The backend is a minimal server using Flask that receives form data. The form se
 ![Backend Response](link-to-screenshot.jpg)
 
 ## Clone the repository:
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone [https://github.com/your-username/your-repository-name.git](https://github.com/Akhilsm97/Stock-Market-Landing-Page.git)
    
 ## Navigate to the project directory:
 
