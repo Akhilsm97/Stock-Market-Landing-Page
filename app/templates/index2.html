@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SM - EDU</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/index.css') }}">
+
+    <link rel="stylesheet" href="https://use.typekit.net/bva4nhi.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <script src="{{ url_for('static', filename='styles/js/scroll.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='images/LogoSpire.png') }}" alt="Logo" width="45" height="10" class="d-inline-block align-text-top logo">
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="#carouselExample">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#container">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#highlights">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact_Us">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Carousel -->
+<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active car_items">
+            <img src="{{ url_for('static', filename='images/crypto2.jpg') }}" alt="Slide 1" class="carousel_image">
+            <div class="overlay"></div> <!-- Full Image Overlay -->
+            <div class="carousel-caption car_caption">
+                <h1 class="car_h1">CRYPTOSPIRE</h1>
+                <p class="p_1">A beginner-friendly platform to master the basics of crypto and stock trading, 
+                   empowering you to invest with confidence and achieve financial growth.
+                </p>
+                <div class="button-container">
+                    <button class="btn btn-light p-3">Join Now</button>
+                    <a class="btn btn-dark p-3" href="#Contact_Us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item car_items">
+            <img src="{{ url_for('static', filename='images/stock.jpg') }}" alt="Slide 2" class="carousel_image">
+            <div class="overlay"></div> <!-- Full Image Overlay -->
+            <div class="carousel-caption car_caption">
+                <h1 class="car_h1">Learn Trading, Build Wealth.</h1>
+                <p class="p_1">We teach you the fundamentals of crypto and stock trading, helping you 
+                   build the skills to grow your wealth over time.
+                </p>
+                <div class="button-container">
+                    <button class="btn btn-light p-3">Join Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item car_items">
+            <img src="{{ url_for('static', filename='images/stock1.jpg') }}" alt="Slide 3" class="carousel_image">
+            <div class="overlay"></div> <!-- Full Image Overlay -->
+            <div class="carousel-caption car_caption">
+                <h1 class="car_h1">Trade Smart, Start Easy.</h1>
+                <p class="p_1">Offering simple lessons and strategies to help you confidently navigate the 
+                   world of crypto and stock trading. Start your trading journey the smart way!
+                </p>
+                <div class="button-container">
+                    <button class="btn btn-light p-3">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!------------------------------------------------ What You’ll Get ----------------------------------------------------------->
+    <section id="highlights" data-aos="fade-up" data-aos-delay="100" data-aos-duration="3000" class="p-4 highlights">
+        <div class="container">
+            <h2 class="text-center p-4 head" >Course Highlights</h2>
+            <p class="sub_heading text-muted text-center ">Unlock Your Trading Potential: Learn Crypto & Stocks, Your Way</p>
+        </div>
+
+        <div class="container-fluid highlight_content  p-5" >
+            <div class="row m-5">
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//begineer.png' ) }}" class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Beginner-Friendly Curriculum</p>
+                            <p class="highlight_content text-muted">Start from scratch with easy-to-follow lessons and grow your knowledge.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//self.png' ) }}" class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Self-Paced Learning</p>
+                            <p class="highlight_content text-muted">Learn at your own pace, anytime, anywhere.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//real.png' ) }}" class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Real-Time Mentorship</p>
+                            <p class="highlight_content text-muted">Get direct guidance and feedback from expert mentors.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//exp.png' ) }}" class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Hands-On Trading Simulations</p>
+                            <p class="highlight_content text-muted">Experience real-world trading scenarios with our simulation tools.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//life.png' ) }} " class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Lifetime Access to Course Material</p>
+                            <p class="highlight_content text-muted">Enjoy lifetime access to course materials, including updates and new lessons.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 outer_col">
+                    <div class="row">
+                        <div class="col-md-4 inner_col">
+                            <img src="{{ url_for('static', filename='images//QA.png' ) }}" class="highlight_images">
+                        </div>
+                        <div class="col-md-8 inner_col">
+                            <p class="highlight_title">Live Q&A Sessions</p>
+                            <p class="highlight_content text-muted">Participate in live Q&A sessions to clear your doubts and deepen your understanding.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------------------------- Instructor Bio --------------------------------------------------------------->
+
+   <section id="Instructor" data-aos="fade-up" data-aos-delay="100" data-aos-duration="3000">
+        <div class="container">
+            <h2 class="text-center p-4 head" >Our Team</h2>
+            <p class="sub_heading text-muted text-center">Meet With Our Expert Instructors</p>
+        </div>
+        <!---------------------------------------Instructor Card ------------------------------------------------------------->
+
+        <div class="container ins" style="margin-top:300px">
+            <div id="cardCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- First Carousel Item -->
+                <div class="carousel-item active" style="transition: opacity 5s ease-in-out;">
+                  <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//ins1.jpg' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">John Doe - Expert in Crypto & Stock Trading</h5>
+                          <p class="card-text text-muted" style="font-family:Georgia, 'Times New Roman', Times, serif ">Certified Financial Analyst (CFA) with 10+ years of experience in trading stocks, forex, and cryptocurrency</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//emma.png' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">Emma Carter  - Certified Cryptocurrency Analyst (CCA)</h5>
+                          <p class="card-text text-muted">Over 8 years of experience in the cryptocurrency market, successfully managing portfolios worth over $2 million.</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//john.png' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">John Matthews - CFA, Stock Market Specialist</h5>
+                          <p class="card-text text-muted">Over 12 years of stock market trading experience, including roles at JP Morgan and Goldman Sachs, and keynote appearances at industry conferences.</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//adithi.jpg' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">Aditi Rao - Expert in Stocks, Forex, and Crypto</h5>
+                          <p class="card-text text-muted">Over 10 years of experience in stocks, forex, and cryptocurrency, specializing in practical trading training worldwide. </p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Second Carousel Item -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <!-- Card 5 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//david.png' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">David Johnson - Forex & Stock Market Specialist</h5>
+                          <p class="card-text text-muted">15+ years of forex and stock trading experience, mentoring hundreds of students both individually and in groups.</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//sophi.jpg' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">Sophia Lee - Financial Analyst, Expert Stock & Options Trader</h5>
+                          <p class="card-text text-muted">Certified Financial Analyst (CFA) and an expert in stock and options trading with over 10 years of experience.</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//david.jpg' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">Daniel David - Cryptocurrency & Stock Market Expert</h5>
+                          <p class="card-text text-muted">Certified Financial Analyst (CFA) with 10+ years of experience in trading stocks, forex, and cryptocurrency</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-3">
+                      <div class="card"  style="width: 20rem;">
+                        <img src="{{ url_for('static', filename='images//lucas.jpg' ) }}" class="card-img-overlay img-rounded" alt="Large Image" />
+                        <div class="card-body">
+                          <h5 class="card-title">Lucas Smith - Professional Technical Analyst</h5>
+                          <p class="card-text text-muted">Lucas is a technical analyst with 12+ years of experience, specializing in chart patterns, indicators, and price action analysis.</p>
+                          <div class="d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/twitter.png' ) }}" alt="Facebook Icon" class="footer-img">
+                            <img src="{{ url_for('static', filename='images/linked.png' ) }}" alt="Facebook Icon" class="footer-img">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        
+        </div>
+
+   </section>
+
+   <!---------------------------------------------- Testimonials-------------------------------------------------------------->
+
+   <section id="Testimonials" data-aos="fade-up" data-aos-delay="100" data-aos-duration="3000" class="p-4 testimonials">
+        <div class="container">
+            <h2 class="text-center p-4 head" >Testimonials</h2>
+            <p class="sub_heading text-muted text-center">Unlock Your Trading Potential: Learn Crypto & Stocks, Your Way</p>
+        </div>
+
+
+        <!------------------------------------------Section start here------------------------------------------------------------------>
+        
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-sm-12">			
+                    <div id="myCarousel" class="carousel test_carousel slide" data-ride="carousel">
+                        <h3>What Our  <b>Students Say</b></h2>
+                        
+                        <!-- Wrapper for carousel items -->
+                        <div class="test_carousel-inner">
+                            <div class="carousel-item test_carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">I started this course with zero trading knowledge, and within three months, I was confidently trading with significant returns. The step-by-step approach made it easy to learn. Highly recommend!</p>
+                                        </div>
+                                        <div class="media">
+                                            <img src="{{ url_for('static', filename='images/test2.jpeg' ) }}" class="mr-3" alt="">
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>Michael Thompson</b></div>
+                                                    <div class="details">Mechanical Engineer</div>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">
+                                                This is the most practical trading course I’ve taken. The simulated environment and one-on-one mentorship were invaluable, helping me achieve a 20% ROI in just two months!</p>
+                                        </div>
+                                        <div class="media">
+                                            <img src="{{ url_for('static', filename='images/test3.jpeg' ) }}" class="mr-3" alt="">
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>Ravi Kumar</b></div>
+                                                    <div class="details">Software Developer / SoftBee</div>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>			
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">This course transformed my trading approach with hands-on exercises and live market analysis. I’ve gone from a hobbyist to a confident full-time trader in stocks and crypto!</p>
+                                        </div>
+                                        <div class="media">
+                                            <img src="{{ url_for('static', filename='images/test1.jpg' ) }}" class="mr-3" alt="">
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>Jessica Lee</b></div>
+                                                    <div class="details">IT Manager</div>											
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">The supportive community and instructor made this course amazing! Sharing ideas and strategies kept me motivated, and the tools provided improved my decision-making. Highly recommend!</p>
+                                        </div>
+                                        <div class="media">
+                                            <img src="{{ url_for('static', filename='images/test4.jpg' ) }}" class="mr-3" alt="">
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>Omar Ahmed</b></div>
+                                                    <div class="details"> Small Business Owner</div>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>			
+                            </div>
+                            <div class="carousel-item test_carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">This course transformed my trading journey with hands-on exercises and live market analysis. I’ve gone from a hobbyist to a confident full-time trader in stocks and crypto!</p>
+                                        </div>
+                                        <div class="media">
+                                            <img src="{{ url_for('static', filename='images/testgirl.jpeg' ) }}" class="mr-3" alt="">
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>Sarah Williams</b></div>
+                                                    <div class="details">SEO Analyst / RealSearch</div>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonial">
+                                            <p class="testimonial-text">Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.</p>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-left d-flex mr-3">
+                                                <img src="{{ url_for('static', filename='images/test3.jpeg' ) }}" alt="">										
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="overview">
+                                                    <div class="name"><b>John Williams</b></div>
+                                                    <div class="details">Web Designer / UniqueDesign</div>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>			
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control-prev test_carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
+                        <a class="carousel-control-next test_carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>   
+    
+    <!----------------------------------------- Contact Us Form ------------------------------------------------------------------>
+
+    <section id="Contact_Us" data-aos="fade-up" data-aos-delay="100" data-aos-duration="3000">
+        <div class="container">
+            <h2 class="text-center p-4 head" >Contact Us</h2>
+            <p class="sub_heading text-muted text-center">We’re here to help! Reach out to us anytime.</p>
+        </div>
+
+        <!--------------------------------------------- Section Here ----------------------------------------------------------->
+
+        <div class="container-fluid">
+            <div class="row p-3">
+                <div class="col-md-6 contact_div">
+                    <p class="heading">CONTACT US</p>
+                    <h2 class="heading_2">Feel free to contact us anytime</h2>
+                    <p class="heading_thank text-muted">Thank you for exploring our trading courses! We provide expert-led, practical trading education absolutely free of charge. Support us by sharing our site with your friends.</p>
+                </div>
+                <div class="col-md-6 contact_div">
+                    <div class="form p-4">
+                        <form action="/submit" method="POST">
+                            <div class="form-group p-3">
+                                <input type="text" class="form-control transparent-input" name="name" placeholder="Your Name.." required>
+                            </div>
+                            <div class="form-group p-3">
+                                <input type="email" class="form-control transparent-input" name="email" placeholder="Your E-mail.." required>
+                            </div>
+                            <div class="form-group p-3">
+                                <textarea  class="form-control transparent-textarea" name="messages" placeholder="Your Message.." required></textarea>
+                            </div>
+            
+                                <button type="submit" class="btn btn-light submit">Send Message Now</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------- Join the Community Section ------------------------------------------->
+    <section id="community" data-aos="fade-up" data-aos-delay="100" data-aos-duration="3000">
+        <div class="container">
+            <h2 class="text-center p-4 head" >Join Our Community</h2>
+            <p class="sub_heading text-muted text-center">Join Our Thriving Trading Community Today!</p>
+        </div>
+        <!-----------------------------------------Section ----------------------------------------------------->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images//join.jpg' ) }}" alt="join now" class="join_Image">
+                </div>
+                <div class="col-md-6 contact_div">
+                    <p class="join_heading">JOIN OUR TEAM</p>
+                    <h2 class="heading_3">Limited Spots Available</h2>
+                    <p class="heading_thank text-muted">Don't miss out on the opportunity to be part of a community that empowers your financial journey.</p>
+                    <p class="heading_thank text-muted">👉 <a href="#" class="join">Join Now</a> and start trading smarter!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------Footer --------------------------------------------->
+    <section id="footer" >
+        <!-- <footer class="footer-59391" style="background: rgb(24, 24, 77);">
+            <div class="border-bottom pb-5 mb-4">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-3">
+                    <form action="#" class="subscribe mb-4 mb-lg-0">
+                      <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Enter your email">
+                      <button><span class="icon-keyboard_backspace"></span></button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-6 text-lg-center">
+                    <ul class="list-unstyled nav-links nav-left mb-4 mb-lg-0">
+                      <li><a href="#" class="listed">Features</a></li>
+                      <li><a href="#" class="listed">Blog</a></li>
+                      <li><a href="#" class="listed">Pricing</a></li>
+                      <li><a href="#" class="listed">Services</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled nav-links social nav-right text-lg-right">
+                      <li><a href="#"  class="listed"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                      </span></a></li>
+                      <li><a href="#"  class="listed"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span></a></li>
+                      <li><a href="#"  class="listed"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span></a></li>
+                      <li><a href="#"  class="listed"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-skype fa-stack-1x fa-inverse"></i>
+                      </span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-center site-logo order-1 order-lg-2 mb-3 mb-lg-0">
+                  <a href="#" class="m-0 p-0" style="text-decoration:none; color: white;">SM EDU</a>
+                </div>
+                <div class="col-lg-4 order-2 order-lg-1 mb-3 mb-lg-0">
+                  <ul class="list-unstyled nav-links m-0 nav-left">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                
+                <div class="col-lg-4 text-lg-right order-3 order-lg-3">
+                  <p class="m-0 text-muted"><small>&copy; 2019. All Rights Reserved.</small></p>
+                </div>
+              </div>
+            </div>
+    
+        </footer> -->
+
+        <div id="container">
+            <div id="part1">
+                <div id="companyinfo">
+                    <a id="sitelink" href="#">CRYPTOSPIRE</a>
+                    <p id="title">Trade Smart, Start Easy.</p>
+                    <p id="detail">We teahes you the fundamentals of crypto and stock trading... </p>
+                </div>
+                <div id="explore">
+                    <p id="txt1">Explore</p>
+                    <a class="link" href="#">Home</a>
+                    <a class="link" href="#Contact_Us">Contact Us</a>
+                    <a class="link" href="#highlights">Highlights</a>
+                    <a class="link" href="#Instructor">Our Team</a>
+                </div>
+                <div id="visit">
+                    <p id="txt2">Contact</p>
+                    <p class="text">Lincoln House </p>
+                    <p class="text">78 Bhulabhai Desai Road </p>
+                    <p class="text">Mumbai 400 026 </p>
+                    <p class="text">Phone: (22) 2363-3611 </p>
+                    <p class="text">Fax: (22) 2363-0350 </p>
+                </div>
+                <div id="legal">
+                    <p id="txt3">Legal</p>
+                    <a class="link1" href="#">Terms and Conditions</a>
+                    <a class="link1" href="#">Private Policy</a>
+                </div>
+                <div id="subscribe">
+                    <p id="txt4">Subscribe to Us</p>
+                    <form>
+                        <input id="email" type="email" placeholder="Email" class="form-control pt-2">
+                    </form>
+                    <a class="waves-effect waves-light btn">Subscribe</a>
+                    <p id="txt5">Connect With Us</p>
+                    <a href="#"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                      </span></a>
+                      <a href=""><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span></a>
+                      <a href="#"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-skype fa-stack-1x fa-inverse"></i>
+                      </span></a>   
+                      <a href="#"><span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                      </span></a>  
+                </div>
+            </div>
+            <div id="part2">
+                <p id="txt6"><i class="material-icons tiny text-center"> copyright</i>copyright 2024 SM EDU - All right reserved</p> 
+            </div>
+        </div>
+    
+    
+    </section>
+
+  
+    
+
+    <!-------AOS JS----->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
