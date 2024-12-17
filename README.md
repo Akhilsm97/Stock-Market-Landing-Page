@@ -15,20 +15,17 @@ This project consists of a responsive landing page designed for a stock market c
 
 The backend is a minimal server using Flask that receives form data. The form sends a POST request to a specified endpoint, and a success message is displayed upon successful submission.
 
-### Screenshot of Backend Response:
-![Backend Response](link-to-screenshot.jpg)
 
 ## Clone the repository:
-   git clone [https://github.com/your-username/your-repository-name.git](https://github.com/Akhilsm97/Stock-Market-Landing-Page.git)
+   git clone [[https://github.com/Akhilsm97/Stock-Market-Landing-Page.git]]
    
 ## Navigate to the project directory:
 
 cd your-repository-name
 
-## Set up a virtual environment:
-python -m venv venv
-source venv/bin/activate # For Linux/Mac
-venv\Scripts\activate # For Windows
+## Activate virtual environment:
+source virtual_env/bin/activate.bat # For Linux/Mac
+virtual_env\Scripts\activate # For Windows
 
 ## Install dependencies:
 pip install -r requirements.txt
@@ -37,7 +34,7 @@ pip install -r requirements.txt
 Make sure Python is installed on your machine. If not, download and install it from python.org.
 
 ## Run the Flask application:
-python app.py
+python server.py
 
 ## Open your browser and navigate to:
 http://127.0.0.1:5000
